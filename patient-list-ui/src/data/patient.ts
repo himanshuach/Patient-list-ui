@@ -9,23 +9,23 @@ export interface Patient {
 export const patients: Patient[] = [
     {
         id: 1,
-        name: "Rahul Sharma",
-        age: 45,
-        disease: "Heart Attack",
-        condition: "Critical"
+        name: "Ankit",
+        age: 28,
+        disease: "Malaria",
+        condition: "Stable"
     },
     {
         id: 2,
-        name: "Anita Verma",
+        name: "Priya",
         age: 30,
         disease: "Fever",
         condition: "Stable"
     },
     {
         id: 3,
-        name: "Mohit Singh",
-        age: 60,
-        disease: "Stroke",
+        name: "Mohit",
+        age: 25,
+        disease: "Blood Cancer",
         condition: "Critical"
     }
 ];
