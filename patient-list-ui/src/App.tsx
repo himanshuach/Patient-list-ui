@@ -1,7 +1,9 @@
 import PatientCard from "./components/PatientCard";
-import { patients } from "./data/patient";
+import { usePatients } from "./hooks/usePatients";
 
 const App: React.FC = () => {
+  const { patients } = usePatients();
+
   return (
     <div
       style={{
@@ -11,7 +13,7 @@ const App: React.FC = () => {
         fontFamily: "Arial"
       }}
     >
-      <h1>Hospital Patient List</h1>
+      <h1>Auto Refreshing Patient List</h1>
 
       {patients.map((patient) => (
         <PatientCard key={patient.id} patient={patient} />
