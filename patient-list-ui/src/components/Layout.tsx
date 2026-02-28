@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar";
+import "./Layout.css";
 
 const Layout = () => {
     return (
-        <div style={{ display: "flex", minHeight: "100vh" }}>
+        <div className="layout">
             <Sidebar />
-            <div style={{ flex: 1, padding: "20px" }}>
+            <main className="main-content">
                 <Outlet />
-            </div>
+            </main>
         </div>
     );
 };
