@@ -4,14 +4,14 @@ import type { Patient } from "../data/patient";
 const initialPatients: Patient[] = [
     {
         id: 1,
-        name: "Rahul Sharma",
-        age: 45,
-        disease: "Heart Attack",
+        name: "Ankit",
+        age: 28,
+        disease: "Malaria",
         condition: "Critical"
     },
     {
         id: 2,
-        name: "Anita Verma",
+        name: "Priya",
         age: 30,
         disease: "Fever",
         condition: "Stable"
@@ -19,9 +19,9 @@ const initialPatients: Patient[] = [
     {
         id: 3,
         name: "Mohit Singh",
-        age: 60,
-        disease: "Stroke",
-        condition: "Stable"
+        age: 25,
+        disease: "Blood Cancer",
+        condition: "Critical"
     }
 ];
 

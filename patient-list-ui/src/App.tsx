@@ -1,24 +1,37 @@
-import PatientCard from "./components/PatientCard";
-import { usePatients } from "./hooks/usePatients";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const App: React.FC = () => {
-  const { patients } = usePatients();
+import Layout from "./components/Layout";
+import ProtectedRoute from "./components/ProtectedRoute";
 
+import Dashboard from "./pages/Dashboard";
+import Patients from "./pages/Patients";
+import PatientDetail from "./pages/PatientDetail";
+import Login from "./pages/Login";
+
+const App = () => {
   return (
-    <div
-      style={{
-        maxWidth: "500px",
-        margin: "auto",
-        padding: "20px",
-        fontFamily: "Arial"
-      }}
-    >
-      <h1>Auto Refreshing Patient List</h1>
+    <BrowserRouter>
+      <Routes>
 
-      {patients.map((patient) => (
-        <PatientCard key={patient.id} patient={patient} />
-      ))}
-    </div>
+        {/* Public Route */}
+        <Route path="/login" element={<Login />} />
+
+        {/* Protected Routes */}
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Layout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Dashboard />} />
+          <Route path="patients" element={<Patients />} />
+          <Route path="patients/:id" element={<PatientDetail />} />
+        </Route>
+
+      </Routes>
+    </BrowserRouter>
   );
 };
 
