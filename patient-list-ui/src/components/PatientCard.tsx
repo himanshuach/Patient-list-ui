@@ -6,8 +6,6 @@ interface PatientCardProps {
 }
 
 const PatientCard: React.FC<PatientCardProps> = ({ patient }) => {
-    const isCritical = patient.condition === "Critical";
-
     const getConditionClass = () => {
         if (patient.condition === "Critical") return "critical";
         return "stable";
