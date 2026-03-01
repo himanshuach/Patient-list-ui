@@ -27,7 +27,7 @@ const Dashboard = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-8">
                 <div className="bg-card-bg border border-border-custom rounded-xl p-6 flex gap-4 transition-all duration-300 hover:border-primary hover:shadow-[0_8px_24px_rgba(124,58,237,0.15)] hover:-translate-y-1">
                     <div className="w-16 h-16 rounded-xl flex items-center justify-center text-[32px] shrink-0 bg-primary/10">👥</div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0 ">
                         <p className="text-[0.875rem] text-text-secondary uppercase tracking-wider font-semibold mb-2">Total Patients</p>
                         <h2 className="text-4xl font-bold text-text-primary mb-2 mt-0 leading-none">{stats.total}</h2>
                         <p className="text-[0.875rem] text-text-secondary mt-0">Active in system</p>
@@ -56,7 +56,7 @@ const Dashboard = () => {
                     <div className="w-16 h-16 rounded-xl flex items-center justify-center text-[32px] shrink-0 bg-primary/10">🏥</div>
                     <div className="flex-1">
                         <p className="text-[0.875rem] text-text-secondary uppercase tracking-wider font-semibold mb-2">System Status</p>
-                        <h2 className="text-4xl font-bold text-text-primary mb-2 mt-0 leading-none">Operational</h2>
+                        <h2 className="text-3xl lg:text-4xl font-bold text-text-primary mb-2 mt-0 leading-tight break-words">Operational</h2>
                         <p className="text-[0.875rem] text-text-secondary mt-0">All systems online</p>
                     </div>
                 </div>
